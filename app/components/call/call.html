@@ -1,0 +1,97 @@
+<div class="call">
+	<div class="tech__head">
+		<div class="tech__title">
+			<h1>
+				Вызов замерщика <br>
+				на дом
+			</h1>
+		</div>
+	</div>
+	<div class="call__section">
+		<div class="call__content">
+			<p class="call__desc">
+				Вызвать заемщика просто! <br>
+				Заполните данные формы и отправьте нам запрос. Мы подберем удобное для вас время для выезда на замер. <br>
+				Замер производится бесплатно.
+			</p>
+			<div class="call__form">
+				<form action="#">
+
+					<div class="e-form">
+						<label for="name">Ваше имя:</label>
+						<input type="text" name="name" id="name">
+					</div>
+
+					<div class="e-form__wrap">
+						<p class="e-form__tooltip e-form__tooltip--date">
+							Укажите дату и время, когда Вам будет удобно,
+							чтобы наши замерщики подъехали. Мы постараемся найти
+							свободных замерщиков именно к этому времени.
+						</p>
+					</div>
+					<div class="e-form e-form--date">
+						<label for="date">Выберите дату:</label>
+						<input type="text" name="date" id="date">
+						<span class="icons-date"></span>
+					</div>
+					
+					<div class="e-form">
+						<p>Укажите время:</p>
+						<label for="time-start">с:</label>
+						<input type="text" name="time-start" id="time-start" class="input--small">
+						
+						<div class="fl-r">
+							<label for="time-end">до:</label>
+							<input type="text" name="time-end" id="time-end" class="input--small">
+						</div>
+					</div>
+
+					<div class="e__dropList e-form">
+						<p>Город:</p>
+						<span class="filter-label filter-label--help">Пятигорск-залесский</span>
+						<div class="filter__drop">
+							<select placeholder="Категория" name="select1" multiple="multiple" id="opt-category" hidden>
+								<option title="city" name="1">Пятигорск-залесский</option>
+								<option title="city" name="2">Пятигорск-залесский</option>
+								<option title="city" name="3">Пятигорск-залесский</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="e-form__wrap">
+						<p class="e-form__tooltip">
+							Введите адрес, <br>
+							по которому замерщики могут найти вас.
+						</p>
+					</div>
+					<div class="e-form e-form-commit">
+						<label for="commit">Адрес замера:</label>
+						<textarea name="commit" id="commit"></textarea>
+					</div>
+
+					<div class="e-form">
+						<label for="phone">Телефон:</label>
+						<input type="text" name="phone" id="phone">
+					</div>
+
+					<div class="e-form--check">
+						<input type="checkbox" name="check1" id="check1">
+						<label for="check1">Заказать дизайн-проект</label>
+					</div>
+
+					<div class="e-form--radio">
+						<input type="radio" name="payment" value="1" id="visa">
+						<label for="visa">Кухня Модерн</label>
+
+						<input type="radio" name="payment" value="2" id="yad">
+						<label for="yad">Кухня Хай-Тек</label>
+					</div>
+					<button type="submit" class="button">отправить заявку</button>
+				</form>
+			</div>
+		</div>
+		<aside>
+			@@include('../adv/adv-vertical.html')
+		</aside>
+	</div>
+</div>

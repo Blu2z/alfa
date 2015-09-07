@@ -1,0 +1,266 @@
+.kitchen {
+	max-width: 1200px;
+	margin: 0 auto;
+
+	&__title {
+		box-sizing: border-box;
+		height: 170px;
+		margin: 0 auto;
+		max-width: 1110px;
+		padding: 43px 0 0;
+
+		h1 {
+			line-height: 1.2em;
+			font-size: 28px;
+			text-transform: uppercase;
+			color: $clr-red;
+		}
+	}
+
+	&__content {
+		max-width: 1200px;
+		margin: 40px auto 0;
+		position: relative;
+		min-height: 300px;
+	}
+
+	&__desc {
+		display: inline-block;
+		margin-bottom: 18px;
+		margin-right: 355px;
+		padding: 0 30px 0 47px;
+
+		p {
+			padding: 14px 0;
+			line-height: 1.7em;
+			font-size: 14px;
+		}
+	}
+}
+
+.order {
+	position: absolute;
+	right: 0;
+	top: 7px;
+	background-color: #fff;
+	width: 350px;
+	height: 250px;
+	padding: 44px 46px;
+	font-size: 14px; 
+	box-sizing: border-box;
+
+	&__cost {
+		font-size: 24px;
+		font-family: 'RobotoBold';
+		margin: 17px 0;
+	}
+
+	&__link {
+		font-family: 'RobotoBold';
+		color: $clr-red;
+		padding-left: 22px;
+		margin-top: 24px;
+		display: inline-block;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			background:transparent url('/images/icons.png') -225px -10px no-repeat;
+			left: 0;
+		}
+
+	}
+}
+
+.fasad {
+	padding: 0 0 30px 47px;
+	font-size: 14px;
+
+	p {
+		padding: 8px 0;
+	}
+
+	ul {
+		margin-top: 15px;
+	}
+
+	li {
+		@extend .inline-block-vtop;
+		width: 80px;
+		font-size: 12px;
+		margin-right: 17px;
+
+		img {
+			display: block;
+			padding-bottom: 8px;
+		}
+	}
+}
+
+.review {
+	&__title {
+		padding-left: 45px;
+		margin-top: 5px;
+	}
+
+	&__container {
+		@extend .inline-block-vtop;
+		width: 50%;
+		padding: 20px 0 20px 47px;
+		box-sizing: border-box;
+	}
+
+	&__date {
+		font-family: 'RobotoBold';
+		font-size: 12px;
+		color: $clr-dark-text;
+	}
+
+	&__name {
+		color: $clr-red;
+		font-size: 14px;
+		font-family: 'RobotoBold';
+		margin-top: 12px;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.7em;
+	}
+
+	&__links {
+		padding: 13px 0 20px 45px;
+
+		span {
+			font-size: 12px;
+			color: $clr-dark-text;
+		}
+	}
+
+	&__link {	
+
+		&--post {
+			color: $clr-red;
+			font-family: 'RobotoBold';
+			font-size: 14px;
+			margin-right: 67px;
+			padding-left: 25px;
+			position: relative;
+
+			&:before {
+				background:transparent url('/images/icons.png') -252px -9px no-repeat;
+				content: '';
+				height: 17px;
+				left: 0;
+				position: absolute;
+				width: 17px;
+			}
+		}
+
+		&--allpost {
+			color: $clr-dark-default;
+			font-family: 'RobotoBold';
+			border-bottom: 1px dotted $clr-dark-default;
+			margin-right: 3px;
+
+			&:hover, &:focus {
+				text-decoration: none;
+				border-bottom: 1px solid;
+			}
+		}
+	}
+}
+
+.selection {
+
+	&__wrap {
+		max-width: 1150px;
+		text-align: justify;
+
+		&:after {
+			content: '';
+			width: 100%;
+			line-height: 0;
+			display: inline-block;
+		}
+	}
+
+	&__box {
+		@extend .inline-block-vtop;
+		max-width: 250px;
+		text-align: left;
+		font-family: 'RobotoBold';
+		margin: 15px 0 40px;
+		cursor: pointer;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+
+			& .tooltip {
+				opacity: .75;
+				transition: all .3s ease-out .1s;
+			}
+		}
+
+		.tooltip {
+			background-color: rgba(255, 255, 255, 0.7);
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			transition: all .3s ease-out .1s;
+			width: 101%;
+			
+			&:before {
+			    content: " ";
+			    display: inline-block;
+			    height: 100%;
+			    vertical-align: middle;
+			}
+
+			p {
+				display: inline-block;
+				font-size: 13px;
+			}
+
+		}
+	}
+
+	&__img {
+		max-width: 250px;
+		position: relative;
+	}
+
+	&__product {
+		padding-bottom: 13px;
+	}
+	
+
+	&__name {
+		font-size: 14px;
+		line-height: 1.3em;
+		padding-top: 20px;
+	}
+
+	&__cost {
+		font-size: 18px;
+	}
+
+	&__title {
+		padding: 51px 47px 33px;
+
+		h2 {
+			font-size: 23px;
+		}
+	}
+}

@@ -1,0 +1,192 @@
+// bower:scss
+// endbower
+
+@import "mixins";
+
+/* core */
+@import "core/pallete";
+@import "core/extends";
+
+
+/* modules */
+
+
+/*pages*/
+// @import "modules/index";
+
+
+/*vendor*/
+// @import "vendor/font-awesome/font-awesome";
+
+
+
+/*comonents*/
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/txt/txt";
+@import "../components/sliders/slider-head";
+@import "../components/adv/adv";
+@import "../components/content/content";
+@import "../components/sliders/slider";
+@import "../components/sliders/slider-big";
+@import "../components/kitchen/kitchen";
+@import "../components/tech/tech";
+@import "../components/paginator/pag";
+@import "../components/type/type";
+@import "../components/breadcrumbs/breadcrumbs";
+@import "../components/call/call";
+
+/* layouts */
+@import "layouts/details";
+@import "layouts/buttons";
+@import "layouts/left-aside";
+@import "layouts/rigth-aside";
+
+
+/* include fonts */
+// @include font-face('FontAwesome', 'fontawesome-webfont', 'font-awesome');
+@include font-face('RobotoRegular', 'RobotoRegular', 'RobotoRegular');
+@include font-face('RobotoBold', 'RobotoBold', 'RobotoBold');
+@include font-face('RobotoMedium', 'RobotoMedium', 'RobotoMedium');
+@include font-face('RobotoLight', 'RobotoLight', 'RobotoLight');
+@include font-face('pfdintextpro-bold', 'pfdintextpro-bold', 'pfdintextpro-bold');
+@include font-face('pfdintextpro-xblack', 'pfdintextpro-xblack', 'pfdintextpro-xblack');
+
+
+/* ==============================================
+                   DOM ELEMENTS
+ ============================================== */
+html {
+    height: 100%;
+    font-size: 15px;
+}
+body {
+    font-family: 'RobotoRegular', "Arial Regular", arial;
+    min-height: 808px;
+    min-width: 1024px;
+    width: 100%;
+    color: $clr-dark-default;
+    background-color: $clr-body;
+    -webkit-text-size-adjust: auto;
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+   
+   text-decoration: underline;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family:  arial;
+    line-height: 1.5em;
+    font-weight: bold
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 16px;
+}
+h4 {
+    font-size: 15px;
+}
+h5 {
+    font-size: 14px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    margin: .7em 0;
+}
+p {
+    padding: 5px 0;
+    line-height: 1.2em;
+}
+
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+.clearfix:after {
+visibility: hidden;
+        display: block;
+        content: "";
+        clear: both;
+        height: 0;
+        
+}
+.clearfix {
+*zoom: 1;
+}
+.slider-fix {
+    position: absolute;
+    width: 100%;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.v-hidden{
+    visibility: hidden;
+}
+
+.filter-label,
+input[type="password"],
+input[type="text"] {
+    height: 45px;
+    width: 200px;
+}
+
+.filter-label,
+textarea,
+input[type="password"],
+input[type="text"] {
+    border: 1px solid $clr-dark-default;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+textarea:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    // border: 1px solid $clr-default;
+    outline: 0;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label:before {
+    content: ' ';
+    cursor:pointer;
+    display:inline-block;
+}
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+strong {
+    font-family: 'RobotoBold';
+}

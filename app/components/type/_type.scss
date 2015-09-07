@@ -1,0 +1,65 @@
+.type {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 1362px;
+
+	&__content {
+		margin-bottom: -10px;
+	}
+
+	.tech {
+		&__tabs {
+			ul { text-align: left;}
+
+			li:not(:last-child) {margin-right: 75px;}
+		}
+	}
+
+	&__section {
+		position: relative;
+	}
+
+	&__tab {
+		margin-right: 250px;
+		background-color: #fff;
+		max-width: 950px;
+	}
+
+	&__name {
+		height: 75px;
+		font-size: 24px;
+
+		:before {
+			content: '';
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&__cost {
+		height: 75px;
+		float: right;
+		font-family: 'RobotoBold';
+		padding-right: 93px;
+	}
+
+	&__img {
+		max-width: 900px;
+		max-height: 400px;
+	}
+
+	&__box {
+		padding-left: 50px;
+
+		&:not(:last-child) {
+			border-bottom: 2px solid $clr-body;
+		}
+	}
+
+	.fasad {
+		padding: 15px 0 25px 0;
+	}
+}
+

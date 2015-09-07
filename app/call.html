@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alfa</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/css-reset/reset.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+
+</head>
+
+
+
+<body>
+
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <noscript>
+        <p>В браузере отключен javascript!!</p>
+    </noscript>
+
+<div class="container">
+ 
+<header>
+    <div class="header">
+        <div class="head__block">
+            <a href="index.html" class="logo">
+                <div class="logo__img">
+                    <img src="./images/logo.png" height="88" width="92" alt="logo">
+                </div>
+                <div class="logo__title">
+                    <h6>АЛЬФА-КУХНИ</h6>
+                    <span>Кухни на заказ</span>
+                </div>
+            </a>
+            <div class="phones">
+                <ul>
+                    <li>8 8793 39-98-23</li>
+                    <li>8 918 766-61-88</li>
+                    <li><a href="#" class="phones__contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <div class="navbar">
+                <ul class="navbar__list">
+                    <li><a href="#" class="navbar__dropped">Кухни</a>
+                        <div class="navbar__droplist">
+                            <ul>
+                                <li><a href="index.html">index</a></li>
+                                <li><a href="call.html">call</a></li>
+                                <li><a href="kitchen.html">kitchen</a></li>
+                                <li><a href="tech.html">tech</a></li>
+                                <li><a href="txt.html">txt</a></li>
+                                <li><a href="type.html">type</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar__dropped">Встраиваемая техника</a>
+                        <div class="navbar__droplist">
+                            <ul>
+                                <li><a href="#">Мойки и смесители</a></li>
+                                <li><a href="#">Варочные панели</a></li>
+                                <li><a href="#">Стиральные машины</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="navbar__dropped">Мебель для кухни</a>
+                        <div class="navbar__droplist">
+                            <ul>
+                                <li><a href="#">Мойки и смесители2</a></li>
+                                <li><a href="#">Варочные панели2</a></li>
+                                <li><a href="#">Стиральные машины2</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">мебель на заказ</a></li>
+                    <li><a href="#">Элитные двери</a></li>
+                    <li><a href="#">О компании</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="info__img"></div>
+            <a href="#" class="info__link">Вызвать замерщика</a>
+            <span>бесплатно!</span>
+        </div>
+    </div>
+</header>
+
+<div class="call">
+	<div class="tech__head">
+		<div class="tech__title">
+			<h1>
+				Вызов замерщика <br>
+				на дом
+			</h1>
+		</div>
+	</div>
+	<div class="call__section">
+		<div class="call__content">
+			<p class="call__desc">
+				Вызвать заемщика просто! <br>
+				Заполните данные формы и отправьте нам запрос. Мы подберем удобное для вас время для выезда на замер. <br>
+				Замер производится бесплатно.
+			</p>
+			<div class="call__form">
+				<form action="#">
+
+					<div class="e-form">
+						<label for="name">Ваше имя:</label>
+						<input type="text" name="name" id="name">
+					</div>
+
+					<div class="e-form__wrap">
+						<p class="e-form__tooltip e-form__tooltip--date">
+							Укажите дату и время, когда Вам будет удобно,
+							чтобы наши замерщики подъехали. Мы постараемся найти
+							свободных замерщиков именно к этому времени.
+						</p>
+					</div>
+					<div class="e-form e-form--date">
+						<label for="date">Выберите дату:</label>
+						<input type="text" name="date" id="date">
+						<span class="icons-date"></span>
+					</div>
+					
+					<div class="e-form">
+						<p>Укажите время:</p>
+						<label for="time-start">с:</label>
+						<input type="text" name="time-start" id="time-start" class="input--small">
+						
+						<div class="fl-r">
+							<label for="time-end">до:</label>
+							<input type="text" name="time-end" id="time-end" class="input--small">
+						</div>
+					</div>
+
+					<div class="e__dropList e-form">
+						<p>Город:</p>
+						<span class="filter-label filter-label--help">Пятигорск-залесский</span>
+						<div class="filter__drop">
+							<select placeholder="Категория" name="select1" multiple="multiple" id="opt-category" hidden>
+								<option title="city" name="1">Пятигорск-залесский</option>
+								<option title="city" name="2">Пятигорск-залесский</option>
+								<option title="city" name="3">Пятигорск-залесский</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="e-form__wrap">
+						<p class="e-form__tooltip">
+							Введите адрес, <br>
+							по которому замерщики могут найти вас.
+						</p>
+					</div>
+					<div class="e-form e-form-commit">
+						<label for="commit">Адрес замера:</label>
+						<textarea name="commit" id="commit"></textarea>
+					</div>
+
+					<div class="e-form">
+						<label for="phone">Телефон:</label>
+						<input type="text" name="phone" id="phone">
+					</div>
+
+					<div class="e-form--check">
+						<input type="checkbox" name="check1" id="check1">
+						<label for="check1">Заказать дизайн-проект</label>
+					</div>
+
+					<div class="e-form--radio">
+						<input type="radio" name="payment" value="1" id="visa">
+						<label for="visa">Кухня Модерн</label>
+
+						<input type="radio" name="payment" value="2" id="yad">
+						<label for="yad">Кухня Хай-Тек</label>
+					</div>
+					<button type="submit" class="button">отправить заявку</button>
+				</form>
+			</div>
+		</div>
+		<aside>
+			<ul class="prop--bg prop__vertical">
+	<li>
+		<a href="#" class="prop__link prop__link--sample">
+			Бесплатный <br> замер
+			<span>Вызывайте замерщика на дом и он всё сделает как нужно!</span>
+		</a>
+	</li>
+	<li>
+		<a href="#" class="prop__link prop__link--design">
+			Дизайн-проект <br> Вашей кухни
+			<span>Уникальный дизайн <br> от лучших дизайнеров сдалает Вашу кухню неповторимой.</span>
+		</a>
+	</li>
+	<li>
+		<a href="#" class="prop__link prop__link--assembly">
+			Установка <br> и сборка
+			<span>Профессионализм и большой опыт в сборке и установке кухонь</span>
+		</a>
+	</li>
+	<li>
+		<a href="#" class="prop__link prop__link--credit">
+			Рассрочка <br> на оплату
+			<span>Не располагаете всей суммой? Не беда! Оформляйте рассрочку без процентов.</span>
+		</a>
+	</li>
+</ul>
+		</aside>
+	</div>
+</div>
+
+
+<footer>
+	<div class="footer">
+		<div class="f__block f__block--1">
+			<ul>
+				<li class="copyright">&copy2015  &laquoАльфа-кухни&raquo</li>
+				<li>НАШ АДРЕСС: Ставропольский край,</li>
+				<li>г. Пятигорск, ул. Ермолова, 48</li>
+				<li>8 8793 39-98-23; 8 918 766-61-88</li>
+			</ul>
+			<ul class='f__work'>
+				<li>ВРЕМЯ РАБОТЫ: с 9:30 до 18:00</li>
+				<li>в воскресенье: с 10:00 до 14:00</li>
+			</ul>
+		</div>
+		<div class="f__block f__block--2">
+			<ul>
+				<li>КУХНИ</li>
+				<li><a href="#" class="f__link">Классика</a></li>
+				<li><a href="#" class="f__link">Модерн</a></li>
+				<li><a href="#" class="f__link">Хай-тек</a></li>
+			</ul>
+		</div>
+		<div class="f__block f__block--3">
+			<ul>
+				<li>ВСТРАИВАЕМАЯ ТЕХНИКА</li>
+				<li><a href="#" class="f__link">Варочные панели</a></li>
+				<li><a href="#" class="f__link">Духовые шкафы</a></li>
+				<li><a href="#" class="f__link">Стиральные машины</a></li>
+				<li><a href="#" class="f__link">Посудомоечные машины</a></li>
+			</ul>
+		</div>
+		<div class="f__block f__block--4">
+			<ul>
+				<li>МЕБЕЛЬ ДЛЯ КУХНИ</li>
+				<li><a href="#" class="f__link">Столы</a></li>
+				<li><a href="#" class="f__link">Стулья</a></li>
+				<li><a href="#" class="f__link">Буфеты</a></li>
+				<li><a href="#" class="f__link">МЕБЕЛЬ НА ЗАКАЗ</a></li>
+				<li><a href="#" class="f__link">ЭДИТНЫЕ ДВЕРИ</a></li>
+			</ul>
+		</div>
+		<div class="f__block f__block--5">
+			<a href="#" class="button">вызвать замерщика</a>
+			<a href="#" class="button">расчет дизайн-проекта</a>
+			<ul class="socials">
+				<li><a href="#" class="social social--vk"></a></li>
+				<li><a href="#" class="social social--od"></a></li>
+				<li><a href="#" class="social social--fb"></a></li>
+			</ul>
+			<p><span class="clr-dark-text">Разработка сайта -</span><a href="#">WebElement</a></p>
+		</div>
+	</div>
+</footer>
+        
+</div>
+
+
+<script>
+   
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.breadcrumb {
+	font-size: 12px;
+	line-height: 60px;
+	// float: right;
+
+	li {
+		font-family: 'RobotoRegular';
+		font-size: 13px;
+		display: inline-block;
+		&:not(:last-child):after {
+			content: '>';
+			padding: 0 10px;
+		}
+
+		&.active {
+			color: $clr-red;
+		}
+	}
+
+	a:hover, a:focus {
+		text-decoration: underline;
+	}
+}
+
+.title {
+	margin: 10px 0;
+	// font-weight: bold;
+	h1 {
+		display: inline-block;
+		font-size: 30px;
+		line-height: 2em;
+	}
+}

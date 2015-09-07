@@ -1,0 +1,131 @@
+.prop {
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+
+	&--bg {
+		background-color: $clr-dark-default;
+		color: #fff;
+		height: 150px;
+	}
+
+	&__link {
+		border: 3px solid #eee;
+		box-sizing: border-box;
+		display: block;
+		height: 130px;
+		margin: 10px;
+		padding: 40px 0 0 27%;
+		font-size: 18px;
+		line-height: 1.3em;
+		font-family: 'RobotoLight';
+		position: relative;
+
+		&:before {
+			position: absolute;
+			width: 36px;
+			height: 36px;
+			content: '';
+			background:transparent url('/images/icons.png') 0 0 no-repeat;
+			top: 25px;
+			left: 11%;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			border-color: $clr-dark;
+		}
+
+		&--sample:before { background-position: -133px 0;}
+		&--design:before { background-position: -87px 0;}
+		&--assembly:before { background-position: -41px 0;}
+		&--credit:before { background-position: 0 0;}
+
+	}
+
+	li {
+		@extend .inline-block-vtop;
+		width: 25%;
+		height: 100%;
+		position: relative;
+	}
+
+	&__tech {
+		// margin-top: 37px;
+		overflow: hidden;
+		position: relative;
+		height: 240px;
+		padding-top: 37px; 
+
+		&:hover > .rama{
+			opacity: 1;
+			transition: left .7s cubic-bezier(0.46, 0.03, 0.52, 0.96) .2s, opacity .3s ease-out .3s;
+		}
+
+		&--link {
+			position: absolute;
+			width: 100%;
+			height: 250px;
+			top: -15px;
+			z-index: 5;
+			padding: 187px 0 0 48px;
+			font-size: 18px;
+			font-family: 'RobotoBold';
+			line-height: 1.3em;
+			box-sizing: border-box;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.rama {
+		border: 3px solid $clr-dark-default;
+		height: 247px;
+		
+		left: 35%;
+		position: absolute;
+		top: 15px;
+		transition: left .7s cubic-bezier(0.46, 0.03, 0.52, 0.96) .2s, opacity .2s ease-out .15s;
+		width: 21%;
+		opacity: 0;
+	}
+
+	&__vertical {
+		width: 250px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: auto;
+
+		.prop {
+			&__link {
+				height: 280px;
+				padding: 72px 35px 0 20px;
+				margin: 16px 25px;
+
+				&:hover,
+				&:focus {
+					border-color: $clr-red;
+					color: $clr-dark-text;
+				}
+
+				span {
+					display: block;
+					font-size: 12px;
+					margin-top: 27px;
+				}
+			}
+		}
+	}
+}
+
+.effect {
+		&--1:hover ~ .rama {left: 2%}
+		&--2:hover ~ .rama {left: 27%}
+		&--3:hover ~ .rama {left: 52%}
+		&--4:hover ~ .rama {left: 77%}
+	}
