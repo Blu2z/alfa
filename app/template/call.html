@@ -15,9 +15,25 @@
         
 </div>
 
+@@include('../components/scripts/scripts.html')
 
 <script>
-   
+   $('div.e__dropList').selectToList({
+   		title: true,
+   		selection : "single", //список "multi" -чекбоксы, "single" - стандартный список на скрытых радиокнопках
+	    closed: 'forse', //закрытие списка true - вкл, false - выкл, forse - закрытие при любом клике
+	    scroll : false,
+   });
+   $( "#date" ).datepicker({
+   		showOtherMonths: true,
+      	selectOtherMonths: true
+   });
+
+   $('#phone').inputmask("+7 ( 999 ) 999 - 99 - 99",
+		{ 
+			"placeholder": "+7 ( ___ ) ___ - __ - __"
+		}
+	);
 </script>
 
 

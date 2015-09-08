@@ -52,11 +52,10 @@
 	}
 
 	&__tech {
-		// margin-top: 37px;
-		overflow: hidden;
-		position: relative;
 		height: 240px;
+		overflow: hidden;
 		padding-top: 37px; 
+		position: relative;
 
 		&:hover > .rama{
 			opacity: 1;
@@ -74,6 +73,8 @@
 			font-family: 'RobotoBold';
 			line-height: 1.3em;
 			box-sizing: border-box;
+			left: 0;
+			cursor: pointer;
 
 			&:hover,
 			&:focus {
@@ -85,7 +86,6 @@
 	.rama {
 		border: 3px solid $clr-dark-default;
 		height: 247px;
-		
 		left: 35%;
 		position: absolute;
 		top: 15px;

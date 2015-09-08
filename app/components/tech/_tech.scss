@@ -1,7 +1,11 @@
 .tech {
 	max-width: 1200px;
 	margin: 0 auto;
-	min-height: 1362px;
+	min-height: 1567px;
+
+	&__tab {
+		// position: absolute;
+	}
 
 	&__section {
 		position: relative;

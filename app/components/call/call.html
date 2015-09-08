@@ -32,28 +32,27 @@
 					<div class="e-form e-form--date">
 						<label for="date">Выберите дату:</label>
 						<input type="text" name="date" id="date">
-						<span class="icons-date"></span>
 					</div>
 					
 					<div class="e-form">
 						<p>Укажите время:</p>
 						<label for="time-start">с:</label>
-						<input type="text" name="time-start" id="time-start" class="input--small">
+						<input type="text" name="time-start" id="time-start" required pattern="^\d{1,6}$" class="input--small">
 						
 						<div class="fl-r">
 							<label for="time-end">до:</label>
-							<input type="text" name="time-end" id="time-end" class="input--small">
+							<input type="text" name="time-end" id="time-end" required pattern="^\d{1,6}$" class="input--small">
 						</div>
 					</div>
 
 					<div class="e__dropList e-form">
-						<p>Город:</p>
-						<span class="filter-label filter-label--help">Пятигорск-залесский</span>
+						<p>Населенный пункт:</p>
+						<span class="filter-label">Пятигорск</span>
 						<div class="filter__drop">
 							<select placeholder="Категория" name="select1" multiple="multiple" id="opt-category" hidden>
-								<option title="city" name="1">Пятигорск-залесский</option>
-								<option title="city" name="2">Пятигорск-залесский</option>
-								<option title="city" name="3">Пятигорск-залесский</option>
+								<option title="city" name="1">Пятигорск1</option>
+								<option title="city" name="2">Пятигорск2</option>
+								<option title="city" name="3">Пятигорск3</option>
 							</select>
 						</div>
 					</div>
@@ -71,7 +70,7 @@
 
 					<div class="e-form">
 						<label for="phone">Телефон:</label>
-						<input type="text" name="phone" id="phone">
+						<input type="text" name="phone" id="phone" required placeholder="+7 ( ___ ) ___ - __ - __">
 					</div>
 
 					<div class="e-form--check">

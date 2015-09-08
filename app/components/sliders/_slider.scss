@@ -13,6 +13,7 @@
 			height: 150px;
 			background:linear-gradient(to right,  $clr-body 50%, rgba(0, 0, 0, 0) 100%);
 			top: 115px;
+			z-index: 5;
 		}
 
 		&:after {
@@ -29,6 +30,7 @@
 			max-width: 1200px;
 			margin: 0 auto;
 			height: 150px;
+			position: relative;
 		}
 
 		&--title {

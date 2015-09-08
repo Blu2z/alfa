@@ -135,28 +135,27 @@
 					<div class="e-form e-form--date">
 						<label for="date">Выберите дату:</label>
 						<input type="text" name="date" id="date">
-						<span class="icons-date"></span>
 					</div>
 					
 					<div class="e-form">
 						<p>Укажите время:</p>
 						<label for="time-start">с:</label>
-						<input type="text" name="time-start" id="time-start" class="input--small">
+						<input type="text" name="time-start" id="time-start" required pattern="^\d{1,6}$" class="input--small">
 						
 						<div class="fl-r">
 							<label for="time-end">до:</label>
-							<input type="text" name="time-end" id="time-end" class="input--small">
+							<input type="text" name="time-end" id="time-end" required pattern="^\d{1,6}$" class="input--small">
 						</div>
 					</div>
 
 					<div class="e__dropList e-form">
-						<p>Город:</p>
-						<span class="filter-label filter-label--help">Пятигорск-залесский</span>
+						<p>Населенный пункт:</p>
+						<span class="filter-label">Пятигорск</span>
 						<div class="filter__drop">
 							<select placeholder="Категория" name="select1" multiple="multiple" id="opt-category" hidden>
-								<option title="city" name="1">Пятигорск-залесский</option>
-								<option title="city" name="2">Пятигорск-залесский</option>
-								<option title="city" name="3">Пятигорск-залесский</option>
+								<option title="city" name="1">Пятигорск1</option>
+								<option title="city" name="2">Пятигорск2</option>
+								<option title="city" name="3">Пятигорск3</option>
 							</select>
 						</div>
 					</div>
@@ -174,7 +173,7 @@
 
 					<div class="e-form">
 						<label for="phone">Телефон:</label>
-						<input type="text" name="phone" id="phone">
+						<input type="text" name="phone" id="phone" required placeholder="+7 ( ___ ) ___ - __ - __">
 					</div>
 
 					<div class="e-form--check">
@@ -281,9 +280,45 @@
         
 </div>
 
+   
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script src="scripts/jquery.inputmask.js"></script>
+    <!-- endbower -->
+    
+    <!-- endbuild -->   
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="components/scripts/tabs.js"></script>
+    <script src="components/scripts/droplist.js"></script>
+    <script src="components/sliders/slider.js"></script>
+    
+    <!-- endbuild -->
+
+
+
+
 
 <script>
-   
+   $('div.e__dropList').selectToList({
+   		title: true,
+   		selection : "single", //список "multi" -чекбоксы, "single" - стандартный список на скрытых радиокнопках
+	    closed: 'forse', //закрытие списка true - вкл, false - выкл, forse - закрытие при любом клике
+	    scroll : false,
+   });
+   $( "#date" ).datepicker({
+   		showOtherMonths: true,
+      	selectOtherMonths: true
+   });
+
+   $('#phone').inputmask("+7 ( 999 ) 999 - 99 - 99",
+		{ 
+			"placeholder": "+7 ( ___ ) ___ - __ - __"
+		}
+	);
 </script>
 
 

@@ -187,4 +187,34 @@ input[type="radio"]+label {
 
 #date {
 	cursor: pointer;
+	background:transparent url('/images/calendar.png') 258px 5px no-repeat;
+}
+
+.filter {
+	&__drop {
+		position: absolute;
+		z-index: 10;
+		background-color: #fff;
+		border: 1px solid $clr-dark-default;
+		top: 69px;
+
+		label:before {
+			display: none;
+		}
+		input[type="radio"] + label {
+			display: block;
+			margin-right: 0; 
+
+			&:hover {
+				background-color: $clr-dark-default;
+				color: #fff;
+			} 
+		}
+
+	}
+}
+
+.e__dropList {
+	position: relative;
+
 }

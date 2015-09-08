@@ -40,7 +40,8 @@ if (typeof Object.create !== 'function') {
 
             this.wrapper = $(this.elem).find('.slider__wrapper');
             this.swither = this.wrapper.children().addClass('swither__item'); 
-            this.cnt = this.wrapper.find('.swither__item').length
+            this.cnt = this.wrapper.find('.swither__item').length;
+            this.countBoxs = $(this.elem).find('.' + this.options.countBox);
 
             self.calcConst();
 
@@ -54,13 +55,38 @@ if (typeof Object.create !== 'function') {
                     : self.toGalleryItem($targetItem.next());
             });
 
-            if (this.options.timer) {
-                setInterval(function () {
+            if (this.options.animBox) this.prepareTooltip();
 
-                var $targetItem = $(elem).find('.swither__item--edge');
-                    
-                    self.toGalleryItem($targetItem.next());
-                },this.options.timer)
+            if (this.options.countSelect) {
+                this.countBoxs.on('click', function () {
+                    var ind = $(this).prevAll().length,
+                        list = $(elem).find('.swither__item').removeClass('swither__item--edge'),
+                        $targetItem = $(list[ind]).addClass('swither__item--edge');
+
+                   self.toGalleryItem($targetItem);
+                })
+            }
+
+            if (this.options.timer) {
+                var timer;
+
+                $(this.elem).on({
+
+                    mouseenter: function () {
+                        clearInterval(timer);
+                    },
+
+                    mouseleave: function () {
+                        timer = setInterval(function () {
+
+                        var $targetItem = $(elem).find('.swither__item--edge');
+                        
+                            self.toGalleryItem($targetItem.next());
+                        },self.options.timer);
+                    }
+                });
+
+                $(this.elem).trigger('mouseleave');
             }
         },
 
@@ -95,6 +121,51 @@ if (typeof Object.create !== 'function') {
             this.swither.first().addClass('swither__item--edge');
         },
 
+        prepareTooltip: function () {
+            var self = this,
+                animBoxs =  $(this.elem).find('.' + this.options.animBox);
+
+                animBoxs.each(function(index, el) {
+                    this.x = $(this).data('x');
+                    this.y = $(this).data('y');
+                    this.time = $(this).data('time');
+
+                    var me = this;
+
+                    setTimeout(function () {
+                        $(me).fadeIn(500);
+                    }, this.time)
+                });
+
+
+        },
+
+        animBox: function ($targetItem) {
+            if (this.options.animBox) {
+
+                var anim = $($targetItem).find('.' + this.options.animBox).hide();
+
+                anim.each(function(index, el) {
+
+                    this.x = $(this).data('x');
+                    this.y = $(this).data('y');
+                    this.time = $(this).data('time');
+
+                    $(this).css({
+                        left: this.x,
+                        top: this.y
+                    });
+
+                    var me = this;
+
+                    setTimeout(function () {
+                        $(me).fadeIn(500);
+                    }, this.time)
+                });
+            }
+            return
+        },
+
         toGalleryItem:  function ($targetItem) {
             var self = this;
 
@@ -102,10 +173,16 @@ if (typeof Object.create !== 'function') {
 
                 var newPosition = $targetItem.position().left;
 
-                if(newPosition <= self.maxScrollPosition+2) {
+                if(newPosition <= self.maxScrollPosition+20) {
 
                     $targetItem.addClass('swither__item--edge');
                     $targetItem.siblings().removeClass('swither__item--edge');
+
+                    if (this.options.countBox) {
+                        this.countBoxs.removeClass('active');
+
+                        $(this.countBoxs[$targetItem.prevAll().length]).addClass('active');
+                    }
 
                     if (this.options.count == 1) {
                         $(this.elem).find('.slider__input')
@@ -115,17 +192,21 @@ if (typeof Object.create !== 'function') {
                     switch (this.options.animation) {
 
                         case 'slide':
-                            this.wrapper.animate({left : - newPosition});
+                            this.wrapper.animate({'left' : - newPosition});
                             break;
 
                         case 'hide-show':
-                            this.wrapper.css({
-                                'opacity' : '0',
-                                'left' : - newPosition
-                            }) 
-                            .animate({opacity : 1});
+                            this.wrapper.fadeTo(300, 0, function() {
+
+                                $(this).css('left', - newPosition);
+                                $(this).animate({opacity : 1}, 300);
+
+                                self.animBox($targetItem);
+                            })
                             break; 
-                    } 
+                    }
+
+                    
                 }
                 else if(this.options.repeat) {
                     if(!this.swither) {return}
@@ -159,8 +240,12 @@ if (typeof Object.create !== 'function') {
         spaceSection: 'auto', //расстояние между секциями
         animation: 'slide', //тип анимации
         count: false, // счетчик слайдов
+        countBox: false, //селектор списка
+        countSelect: false, //выбор по индикатору
         timer: false, //автопереключение
-        repeat: false //показ слайдов по кругу
+        repeat: false, //показ слайдов по кругу
+        animBox: null // всплывающие блоки - $(селектор)
+
     };
 
 })( jQuery, window, document );

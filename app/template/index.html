@@ -34,10 +34,30 @@
 @@include('../components/footer/footer.html')
         
 </div>
+@@include('../components/scripts/scripts.html')
 
 
 <script>
-   
+  $('div.slider__head').sliderShop({
+  	caseLimit: 1, //кол-во товаров в витрине
+    spaceSection: 'auto', //расстояние между секциями
+    animation: 'hide-show', //тип анимации
+    timer: 5000, //автопереключение
+    repeat: true, //показ слайдов по кругу
+    animBox: 'slider__anim', // селектор вспдывающих блоков
+    countBox: 'slider__ind', //селектор списка
+    countSelect: true
+  });
+
+  $('div.slider__work').sliderShop({
+  	caseLimit: 4, //кол-во товаров в витрине
+    spaceSection: 'auto', //расстояние между секциями
+    animation: 'slide', //тип анимации
+    timer: 7000, //автопереключение
+    repeat: true, //показ слайдов по кругу
+  })
+
+
 </script>
 
 
