@@ -19,14 +19,21 @@
 
 <script>
 	$('div.slider__big').sliderShop({
-  	caseLimit: 1, //кол-во товаров в витрине
-    spaceSection: 'auto', //расстояние между секциями
-    animation: 'slide', //тип анимации
-    timer: 4000, //автопереключение
-    repeat: true, //показ слайдов по кругу
-    countBox: 'slider__ind', //селектор списка
-    countSelect: true
-});
+	  	caseLimit: 1, //кол-во товаров в витрине
+	    spaceSection: 'auto', //расстояние между секциями
+	    animation: 'slide', //тип анимации
+	    timer: 4000, //автопереключение
+	    repeat: true, //показ слайдов по кругу
+	    countBox: 'slider__ind', //селектор списка
+	    countSelect: true
+	});
+
+	$('.get--allpost').one('click', function (e) {
+		e.preventDefault();
+
+		$('.review__wrap--hidden').slideDown();
+		$(this).fadeOut(500);
+	});
 </script>
 
 

@@ -30,23 +30,23 @@ $.fn.tab = function (h,a,d) {
 		btn.on('click', function( e ) {
 			e.preventDefault();
 
-			if($(this).hasClass('active')) return;
+			if($(this).parent().hasClass('active')) return;
 
-			btn.removeClass('active')
-					.each(function() {
-						$(self).parent().find('.' + $(this).data('tab')).hide(anim);
+			btn.parent().removeClass('active')
+					btn.each(function() {
+						$('body').find('.' + $(this).data('tab')).fadeOut(anim);
 					});
 
-			$(this).addClass('active');
+			$(this).parent().addClass('active');
 
 			if (hidden) {
 				$(document).trigger('close');
-				$(self).parent().find('.' + $(this).data('tab')).show(anim).close({
+				$('body').find('.' + $(this).data('tab')).fadeIn(anim).close({
 					allow: true,
 				    link: this,
 				});
 			} else {
-				$(self).parent().find('.' + $(this).data('tab')).show(anim);
+				$('body').find('.' + $(this).data('tab')).fadeIn(anim);
 			}
 		});
 	});

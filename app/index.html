@@ -396,37 +396,37 @@
 	<div class="slider__work--window">
 		<ul class="slider__wrapper">
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="./images/img1_panel.jpg" class="fancybox" rel="gallery1">
 					<img src="./images/img1_panel.jpg" height="150" width="250" alt="foto">
 				</a>
 			</li>
@@ -495,12 +495,14 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="scripts/jquery-ui.js"></script>
     <script src="scripts/jquery.inputmask.js"></script>
+    <script src="scripts/fancybox/jquery.fancybox.js"></script>
     <!-- endbower -->
     
     <!-- endbuild -->   
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="components/scripts/tabs.js"></script>
     <script src="components/scripts/tabs.js"></script>
     <script src="components/scripts/droplist.js"></script>
     <script src="components/sliders/slider.js"></script>
@@ -531,6 +533,8 @@
     timer: 7000, //автопереключение
     repeat: true, //показ слайдов по кругу
   })
+
+  $('.fancybox').fancybox();
 
 
 </script>

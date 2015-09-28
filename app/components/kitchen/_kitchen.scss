@@ -172,6 +172,12 @@
 			}
 		}
 	}
+
+	&__wrap {
+		&--hidden {
+			display: none;
+		}
+	}
 }
 
 .selection {

@@ -54,6 +54,10 @@
 		text-transform: uppercase;
 		letter-spacing: 0;
 		font-size: 15px;
+		&:hover {
+			color: $clr-dark-default;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -193,6 +197,9 @@
 		text-decoration: underline;
 		font-size: 14px;
 		display: block;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	span {

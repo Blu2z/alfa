@@ -34,6 +34,23 @@
 			"placeholder": "+7 ( ___ ) ___ - __ - __"
 		}
 	);
+
+   // $('body').inputmask.extendDefinitions({
+   //    '8': {
+   //       validator: "[0-2]",
+   //       cardinality: 1
+   //    },
+   //    '7': {
+   //       validator: "[0-5]",
+   //       cardinality: 1
+   //    }
+   // });
+
+   $('#time-start, #time-end').inputmask('99-99',
+      { 
+         "placeholder": "чч-мм",
+      }
+   );
 </script>
 
 

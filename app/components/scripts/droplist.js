@@ -154,7 +154,7 @@ $.fn.selectToList = function (options) {
 $.fn.selectToList.options = {
     title: false,
     selection : "multi", //список "multi" -чекбоксы, "single" - стандартный список на скрытых радиокнопках
-    closed: true, //закрытие списка true - вкл, false - выкл, forsed - закрытие при любом клике
+    closed: true, //закрытие списка true - вкл, false - выкл, forse - закрытие при любом клике
     scroll : true,
     choice : false, //перемещение ввыбранных чекбоксов наверх
     button : false, 

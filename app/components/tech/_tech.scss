@@ -4,7 +4,11 @@
 	min-height: 1567px;
 
 	&__tab {
-		// position: absolute;
+		display: none;
+
+		&--1 {
+			display: block;
+		}
 	}
 
 	&__section {

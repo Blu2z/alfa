@@ -27,8 +27,10 @@ if (typeof Object.create !== 'function') {
 
 (function ($, window, document, undefined) {
 
+    
+
     var Slider = {
-        init: function (options, elem) {
+        init: function (options, elem) { 
 
             var self = this;
             var swither, wrapper, cnt;
@@ -56,6 +58,7 @@ if (typeof Object.create !== 'function') {
             });
 
             if (this.options.animBox) this.prepareTooltip();
+            if (this.options.response) this.response();
 
             if (this.options.countSelect) {
                 this.countBoxs.on('click', function () {
@@ -120,6 +123,14 @@ if (typeof Object.create !== 'function') {
 
             this.swither.first().addClass('swither__item--edge');
         },
+
+        // response: function () {
+        //     var self = this;
+
+        //     $(window).on('resize', function (){
+        //         self.calcConst();
+        //     }
+        // },
 
         prepareTooltip: function () {
             var self = this,
@@ -233,9 +244,9 @@ if (typeof Object.create !== 'function') {
             slider.init( options, this );
         });
 
-    }; 
+    };
 
-   $.fn.sliderShop.options = {
+    $.fn.sliderShop.options = {
         caseLimit: 4, //кол-во товаров в витрине
         spaceSection: 'auto', //расстояние между секциями
         animation: 'slide', //тип анимации
@@ -244,8 +255,8 @@ if (typeof Object.create !== 'function') {
         countSelect: false, //выбор по индикатору
         timer: false, //автопереключение
         repeat: false, //показ слайдов по кругу
-        animBox: null // всплывающие блоки - $(селектор)
-
+        animBox: null, // всплывающие блоки - $(селектор)
+        response: false
     };
 
 })( jQuery, window, document );

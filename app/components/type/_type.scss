@@ -63,3 +63,10 @@
 	}
 }
 
+.link__wrap {
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
