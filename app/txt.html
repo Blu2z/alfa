@@ -453,11 +453,8 @@
 		</div>
 
 		<div class="txt__video">
-			<iframe id="ytplayer" type="text/html" width="720" height="405"
-			src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
-			frameborder="0" allowfullscreen>
-		</iframe>
-	</div>
+			<div id="player" data-urlid="I53HDr0-Qew"></div>
+		</div>
 
 	<div class="txt__wrap">
 		<div class="txt__icons">
@@ -536,6 +533,8 @@
 
 
 
+<div id="player2" data-urlid="M7lc1UVf-VE"></div>
+<div id="player3" data-urlid="qatmJtIJAPw"></div>
 
 <footer>
 	<div class="footer">
@@ -591,40 +590,9 @@
 	</div>
 </footer>
 
-<div id="player"></div>
 
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '700',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            // 'onReady': onPlayerReady,
-            // 'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-    </script>
+<script src="https://www.youtube.com/iframe_api"></script>
         
 </div>
 
@@ -642,7 +610,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="components/scripts/tabs.js"></script>
-    <script src="components/scripts/tabs.js"></script>
+    <script src="components/txt/video.js"></script>
     <script src="components/scripts/droplist.js"></script>
     <script src="components/sliders/slider.js"></script>
     
@@ -653,23 +621,27 @@
 
 
 <script>
-   $('div.slider__work').sliderShop({
-  	caseLimit: 4, //кол-во товаров в витрине
-    spaceSection: 'auto', //расстояние между секциями
-    animation: 'slide', //тип анимации
-    timer: 4000, //автопереключение
-    repeat: true, //показ слайдов по кругу
-  });
-
-
-    $('body').on('click', function() {
-	    	if (player) {
-	    player.playVideo();
-	  }
+    $('div.slider__work').sliderShop({
+      caseLimit: 4, //кол-во товаров в витрине
+      spaceSection: 'auto', //расстояние между секциями
+      animation: 'slide', //тип анимации
+      timer: 4000, //автопереключение
+      repeat: true, //показ слайдов по кругу
     });
 
+    $('#player, #player2, #player3').playerYouTube();
 
-console.log(ytplayer);
+
+
+
+   //  $('body').on('click', function() {
+	  //   	if (player) {
+	  //   player.playVideo();
+	  // }
+   //  });
+
+
+
 	
    
 </script>

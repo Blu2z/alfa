@@ -210,3 +210,23 @@
 	&--xsl {background-position: -553px 0;}
 	&--pdf {background-position: -614px 0;}
 }
+
+.video__wrap {
+	position: relative;
+	display: inline-block;
+
+	& > .btn_player {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+    	left: 0;
+    	transition: background .3s ease-out 0s;
+    	background: rgba(40, 51, 56, 0.8) url('/images/play.png') 50% 50% no-repeat;
+
+    	&:hover {
+    		transition: background .3s ease-out 0s;
+    		background-color: rgba(40, 51, 56, 0.1);
+    	}
+	}
+}
