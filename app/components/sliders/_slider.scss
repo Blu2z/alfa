@@ -6,6 +6,11 @@
 		position: relative;
 		height: 325px;
 
+		&--full {
+			margin: 0 -110px 0 -50px;
+			height: 255px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -41,6 +46,9 @@
 			box-sizing: border-box;
 			letter-spacing: -.3px;
 			height: 115px;
+			h2 {
+				font-size: 24px;
+			}
 		}
 
 		ul {

@@ -10,8 +10,8 @@
 
 @@include('../components/txt/txt.html')
 
-<div id="player2" data-urlid="M7lc1UVf-VE"></div>
-<div id="player3" data-urlid="qatmJtIJAPw"></div>
+<!-- <div id="player2" data-urlid="M7lc1UVf-VE"></div>
+<div id="player3" data-urlid="qatmJtIJAPw"></div> -->
 
 @@include('../components/footer/footer.html')
 
@@ -24,29 +24,44 @@
 @@include('../components/scripts/scripts.html')
 
 <script>
-    $('div.slider__work').sliderShop({
-      caseLimit: 4, //кол-во товаров в витрине
-      spaceSection: 'auto', //расстояние между секциями
-      animation: 'slide', //тип анимации
-      timer: 4000, //автопереключение
-      repeat: true, //показ слайдов по кругу
-    });
 
-    $('#player, #player2, #player3').playerYouTube();
+$('div.slider__work').sliderShop({
+	caseLimit: 4, //кол-во товаров в витрине
+	spaceSection: 'auto', //расстояние между секциями
+	animation: 'slide', //тип анимации
+	timer: 4000, //автопереключение
+	repeat: true, //показ слайдов по кругу
+});
 
+/*
+инициализация видео
+id видео класть в атрибут data
+пример: <div id="player2" data-urlid="M7lc1UVf-VE"></div>
+высота и ширина задается через опции:
+	$('#player, #player2, #player3').playerYouTube({
+		height: 450,
+		width: 700,
+	});
+*/
 
+$('#player').playerYouTube();
 
+$('.txt__podkat').each(function(index, el) {
+	$(this).hasClass('open') 
+		? $('body').find('.' + $(this).data('tab')).show()
+		: $('body').find('.' + $(this).data('tab')).hide();
+});
 
-   //  $('body').on('click', function() {
-	  //   	if (player) {
-	  //   player.playVideo();
-	  // }
-   //  });
+$('.txt__podkat').on('click', function (e) {
+	e.preventDefault();
 
+	$(this).toggleClass('open').hasClass('open') 
+		? $('body').find('.' + $(this).data('tab')).slideDown()
+		: $('body').find('.' + $(this).data('tab')).slideUp();
+});
 
+ $('.fancybox').fancybox();
 
-	
-   
 </script>
 
 

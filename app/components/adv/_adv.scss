@@ -44,7 +44,8 @@
 
 	}
 
-	li {
+	li,
+	&__list {
 		@extend .inline-block-vtop;
 		width: 25%;
 		height: 100%;
@@ -54,7 +55,8 @@
 	&__tech {
 		height: 240px;
 		overflow: hidden;
-		padding-top: 37px; 
+		padding-top: 37px;
+		margin-top: -32px;
 		position: relative;
 
 		&:hover > .rama{

@@ -7,8 +7,6 @@ function onYouTubeIframeAPIReady () {
 	};
 
 function playerInit (div, h, w, id) {
-	// console.log('start: ' + div + ' ,' + h + ' , ' + w + ' , ' + id);
-
 	var name = div;
 	var player = new YT.Player(div, {
 		height: h,
@@ -18,10 +16,9 @@ function playerInit (div, h, w, id) {
 			'onReady': function () {
 				var btnName = 'btn_' + div;
 
-				$('#' + div).after("<a id='" + btnName + "' class='btn_player'>start!</a>");
+				$('#' + div).after("<a id='" + btnName + "' class='btn_player'></a>");
 
 				$('#' + btnName).on('click', function () {
-					console.log('click!');
 					$(this).fadeOut(400);
 
 					player.playVideo();
@@ -40,7 +37,6 @@ if (typeof Object.create !== 'function') {
 }
 
 (function ($, window, document, undefined) {
-
 	var PlayerYT = {
 		init: function (options, elem) {
 			var self = this;
@@ -78,7 +74,6 @@ if (typeof Object.create !== 'function') {
 	$.fn.playerYouTube.options = {
     	height: 450,
 		width: 700,
-		// videoId: 'M7lc1UVf-VE',
-};
+	};
 
 })( jQuery, window, document );
