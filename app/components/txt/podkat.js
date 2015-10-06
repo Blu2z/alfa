@@ -1,14 +1,11 @@
-    var menu = $('.mobile>.top-menu').hide(),
-        item = $('.mobile>.top-menu>li>a:not(:only-child)'),
-        subMenu = $('.mobile>.top-menu>li>ul').hide();
+$('.txt__podkat').on('click', function (e) {
+    e.preventDefault();
 
-
-    $('.txt__podkat').on('click', function (e) {
-        e.preventDefault();
-
-        if ( $(this).hasClass('active') ) return;
-
+    if ( $(this).hasClass('active') ) {
+        $(this).removeClass('active');
+        $('body').find('.' + $(this).data('tab')).slideUp();
+    } else {
         $(this).addClass('active');
-
-
-    });
+        $('body').find('.' + $(this).data('tab')).slideDown();
+    }
+});
