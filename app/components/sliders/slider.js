@@ -58,7 +58,11 @@ if (typeof Object.create !== 'function') {
             });
 
             if (this.options.animBox) this.prepareTooltip();
-            if (this.options.response) this.response();
+            if (this.options.response) {
+                this.response();
+
+                $(window).trigger('resize');
+            }
 
             if (this.options.countSelect) {
                 this.countBoxs.on('click', function () {
@@ -124,13 +128,26 @@ if (typeof Object.create !== 'function') {
             this.swither.first().addClass('swither__item--edge');
         },
 
-        // response: function () {
-        //     var self = this;
+        response: function () {
+            var self = this;
 
-        //     $(window).on('resize', function (){
-        //         self.calcConst();
-        //     }
-        // },
+            $(window).on('resize', function (){
+
+                if($(window).width() > 1400) {
+                    self.swither.width(1300);
+                }
+
+                if($(window).width() < 1024) {
+                    self.swither.width(1024);
+                }
+
+                if($(window).width() > 1024 && $(window).width() < 1400) {
+                    self.swither.width($(window).width());
+                }
+
+                self.calcConst();
+            });
+        },
 
         prepareTooltip: function () {
             var self = this,
@@ -256,7 +273,7 @@ if (typeof Object.create !== 'function') {
         timer: false, //автопереключение
         repeat: false, //показ слайдов по кругу
         animBox: null, // всплывающие блоки - $(селектор)
-        response: false
+        response: true
     };
 
 })( jQuery, window, document );

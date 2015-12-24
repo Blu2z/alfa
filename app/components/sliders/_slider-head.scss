@@ -1,6 +1,6 @@
 .slider {
 	&__head {
-		max-width: 1200px;
+		max-width: 1400px;
 		min-width: 1024px;
 		margin: 0 auto;
 		position: relative;
@@ -27,7 +27,7 @@
 	}
 
 	&__img {
-		margin-right: 250px;
+		// margin-right: 250px;
 	}
 
 	&__indicator {
@@ -85,7 +85,7 @@
 	&__main {
 		height: 405px;
 		max-width: 1300px;
-		margin-left: -100px;
+		// margin-left: -100px;
 		position: relative;
 		overflow-x: hidden;
 		margin-top: -100px;
@@ -239,7 +239,7 @@
 	position: absolute;
 	width: 26px;
 	height: 26px;
-	top: 124px;
+	top: 50px;
 	right: 176px;
 	background:transparent url('/images/icons.png') -366px -4px no-repeat;
 
@@ -256,4 +256,22 @@
 
 .slider__anim {
 	display: none;
+}
+
+@media screen and (max-width: 1300px) {
+	.slider__main {
+		margin-left: 0;
+		min-width: 1024px;
+	}
+	.swither__item {
+
+	}
+
+	.slider__img {
+		// margin-left: 75px;
+		img {
+			max-width: none;
+			// width: 100%;
+		}
+	}
 }

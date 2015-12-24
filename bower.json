@@ -1,8 +1,12 @@
 {
-  "name": "agrotech",
+  "name": "ttt",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
     "css-reset": "~2.5.1"
+  },
+  "devDependencies": {
+    "chai": "~3.4.0",
+    "mocha": "~2.3.3"
   }
 }
